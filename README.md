@@ -4,4 +4,5 @@ Some configurations for Hammerspoon that’s useful to me.
 Name|Default Hot Key|Description
 ---|---|---
 Type to Paste|Hyper+V|Automatically type what's in the clipboard
+
 *Hyper As in ⌘+⌥+⌃+⇧*
