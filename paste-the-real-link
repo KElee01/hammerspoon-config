@@ -1,0 +1,37 @@
+hs.hotkey.bind({"cmd", "alt", "control", "shift"}, "B", function()
+  --Exact copied link
+  fakeLink = hs.pasteboard.getContents()
+  --When the copied text is too short to be a link
+  fakeLinkLength = string.len(fakeLink)
+  if (fakeLinkLength <= 4)
+  then
+    realLink = false
+  else
+    --Find the link which starts with "http"
+    realLink = true
+    a = 0
+    while (string.sub(fakeLink, a, a + 3) ~= "http")
+    do
+        a = a + 1
+        --When can't find a link
+        if (a + 2 == fakeLinkLength)
+        then
+          realLink = false
+          break
+        end
+    end
+    --Exact the link founded
+    if (realLink)
+    then
+      realLink = string.sub(fakeLink, a, -1)
+    end
+  end
+  if not (realLink)
+  then
+    --Notify the error
+    hs.notify.new({title="Hammerspoon",informativeText=Can't find a copied link}):send()
+  else
+    --Automatically type the real link extracted
+    hs.eventtap.keyStrokes(realLink)
+  end
+end)
