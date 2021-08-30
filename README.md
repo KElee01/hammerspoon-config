@@ -6,4 +6,4 @@ Name|Default Hot Key|Description
 [Type to Paste](https://github.com/KElee01/hammerspoon-config/blob/main/type-to-paste.lua)|Hyper<sup>1</sup>+V |Automatically type what's in the clipboard
 [Widescreen Safari](https://github.com/KElee01/hammerspoon-config/blob/main/widescreen-safari.lua)|⌘+⌥+⌃+F/D/G|Change the aspect ratio of Safari to fit the widescreen aspect ratio 16:9 and resize it (D for reduce, F for enlarge)
 
-1: *Hyper As in ⌘+⌥+⌃+⇧*
+1: *Hyper as in ⌘+⌥+⌃+⇧*
